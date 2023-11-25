@@ -1,0 +1,129 @@
+.text {
+    position: absolute;
+    z-index: 100;
+    top: calc(65px + 8vw);
+    left: 5vw;
+    background-color: inherit;
+    height: 10vh;
+    width: 39vw;
+    font: 'Inter';
+    font-size: 2.5vw;
+    color: white;
+}
+.imag {
+    position: absolute;
+    width: 55vw;
+    top: 65px;
+    right: 0vw;
+}
+.continutTop {
+    display: contents;
+}
+.content {
+    display: block;
+    border: 10px;
+}
+.contentMid1 {
+    display: block;
+    position: absolute;
+    background-color: white;
+    height: 40vw;
+    width: 40vw;
+    top: 45vw;
+    left: 5vw;
+    border-radius: 6%;
+    margin-top: 60px;
+}
+.contentMid2 {
+    display: block;
+    position: absolute;
+    background-color: white;
+    height: 40vw;
+    width: 40vw;
+    top: 45vw;
+    left: 54vw;
+    border-radius: 6%;
+    margin-top: 60px;
+}
+.writing1 {
+    position: relative;
+    width: 30vw;
+    top: 4vh;
+    left: 2vw;
+    font-family: Inter;
+    font-size: 1.7vw;
+    font-weight: bold;
+}
+.writing2 {
+    position: relative;
+    font-family: Inter;
+    font-size: 1.3vw;
+    top: 4vh;
+    left: 2vw;
+}
+.b11 {
+    position: relative;
+    border: 1px solid black;
+    height: 2vh;
+    width: 1vw;
+    border-radius: 100%;
+    top: 6vh;
+    left: 2vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .writing1 {
+        position: relative;
+        width: 30vw;
+        top: 2vh;
+        left: 2vw;
+        font-family: Inter;
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+    .writing2 {
+        position: relative;
+        font-family: Inter;
+        font-size: 1.3vw;
+        top: 2vh;
+        left: 2vw;
+    }
+    .b11 {
+        position: relative;
+        border: 1px solid black;
+        height: 2vh;
+        width: 1vw;
+        border-radius: 100%;
+        top: 4vh;
+        left: 2vw;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .writing1 {
+        position: relative;
+        width: 30vw;
+        top: 1vh;
+        left: 2vw;
+        font-family: Inter;
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+    .writing2 {
+        position: relative;
+        font-family: Inter;
+        font-size: 1.3vw;
+        top: 1vh;
+        left: 2vw;
+    }
+    .b11 {
+        position: relative;
+        border: 1px solid black;
+        height: 2vh;
+        width: 1vw;
+        border-radius: 100%;
+        top: 2vh;
+        left: 2vw;
+    }
+}

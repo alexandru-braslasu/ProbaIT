@@ -1,0 +1,300 @@
+.popup-box {
+    position: fixed;
+    background-color: #D9D9D9B8;
+    z-index: 1;
+    left: 0;
+    top: 65px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    position: fixed;
+    top: calc(65px + 18vh);
+    border: solid 4 px black;
+    left: 34.5vw;
+    width: 27vw;
+    height: 55vh;
+    background-color: #04395E;
+    margin-top: 0;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 3%;
+    z-index: 1000;
+}
+
+.btn-close {
+    position: fixed;
+    left: calc(34.5vw + 27vw - 2.5vw);
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 20%;
+    z-index: 1000;
+}
+.login-popup {
+    color: white;
+    display: flex;
+    position: fixed;
+    top: calc(65px + 24vh);
+    left: 45vw;
+    font-weight: bold;
+    font-size: 2.3vw;
+}
+.email {
+    position: fixed;
+    left: 38vw;
+    top: calc(65px + 37vh);
+    width: 19vw;
+    height: 6vh;
+    border-radius: 7px;
+    background-color: inherit;
+    border-color: white;
+    border: 2.3px solid white;
+    color: white;
+    font-size: 1vw;
+    line-height: 20%;
+    ::placeholder {
+        color: white;
+    }
+}
+.password {
+    position: fixed;
+    left: 38vw;
+    top: calc(65px + 48vh);
+    width: 19vw;
+    height: 6vh;
+    border-radius: 7px;
+    background-color: inherit;
+    border-color: white;
+    border: 2.3px solid white;
+    color: white;
+    font-size: 1vw;
+    line-height: 20%;
+    ::placeholder {
+        color: white;
+    }
+}
+.logare {
+    position: fixed;
+    width: 8vw;
+    height: 5vh;
+    top: calc(65px + 61vh);
+    left: 44.5vw;
+    font-weight: bold;
+    color: #04395E;
+    border-radius: 5px;
+}
+@media screen and (max-width: 1500px) and (min-height: 1100px) {
+    .box {
+        position: fixed;
+        top: calc(65px + 25vh);
+        border: solid 4 px black;
+        left: 17vw;
+        width: 65vw;
+        height: 40vh;
+        background-color: #04395E;
+        margin-top: 0;
+        padding: 20px;
+        overflow: auto;
+        border-radius: 3%;
+        z-index: 1000;
+    }
+    
+    .btn-close {
+        position: fixed;
+        top: calc(65px + 26vh);
+        left: calc(17vw + 65vw - 5vw);
+        width: 1vw;
+        height: 1vw;
+        cursor: pointer;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 20%;
+        z-index: 1000;
+    }
+    .login-popup {
+        color: white;
+        display: flex;
+        position: fixed;
+        top: calc(65px + 28vh);
+        left: 44vw;
+        font-weight: bold;
+        font-size: 5vw;
+    }
+    .email {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 38vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 3vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+    .password {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 45vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 3vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+    .logare {
+        position: fixed;
+        width: 18vw;
+        height: 5.5vh;
+        top: calc(65px + 54vh);
+        left: 42vw;
+        font-weight: bold;
+        color: #04395E;
+        font-size: 2.5vw;
+        border-radius: 4px;
+    }
+}
+@media screen and (max-width: 1500px) and (max-height: 1100px) {
+    .box {
+        position: fixed;
+        top: calc(65px + 25vh);
+        border: solid 4 px black;
+        left: 17vw;
+        width: 65vw;
+        height: 40vh;
+        background-color: #04395E;
+        margin-top: 0;
+        padding: 20px;
+        overflow: auto;
+        border-radius: 1%;
+        z-index: 1000;
+    }
+    
+    .btn-close {
+        position: fixed;
+        top: calc(65px + 26vh);
+        left: calc(17vw + 65vw - 4.5vw);
+        width: 1vw;
+        height: 1vw;
+        cursor: pointer;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 20%;
+        z-index: 1000;
+    }
+    .login-popup {
+        color: white;
+        display: flex;
+        position: fixed;
+        top: calc(65px + 28vh);
+        left: 46vw;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    .email {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 38vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 2vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+    .password {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 45vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 2vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+    .logare {
+        position: fixed;
+        width: 15vw;
+        height: 5vw;
+        top: calc(65px + 54vh);
+        left: 43vw;
+        font-weight: bold;
+        color: #04395E;
+        font-size: 2vw;
+        border-radius: 4px;
+    }
+}
+@media screen and (min-width: 200px) and (min-height: 550px) and (max-width: 1500px) {
+    .login-popup {
+        color: white;
+        display: flex;
+        position: fixed;
+        top: calc(65px + 28vh);
+        left: 44vw;
+        font-weight: bold;
+        font-size: 4.5vw;
+    }
+    .email {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 39vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 2vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+    .password {
+        position: fixed;
+        left: 30vw;
+        top: calc(65px + 46vh);
+        width: 40vw;
+        height: 3.5vh;
+        border-radius: 5px;
+        background-color: inherit;
+        border-color: white;
+        border: 1px solid white;
+        color: white;
+        font-size: 2vw;
+        line-height: 20%;
+        ::placeholder {
+            color: white;
+        }
+    }
+}
