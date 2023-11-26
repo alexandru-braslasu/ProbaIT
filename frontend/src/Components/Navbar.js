@@ -25,23 +25,25 @@ export default function Navbar() {
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{position: 'fixed', backgroundColor: 'white', height: '65px', width: '100%', zIndex: '1000', boxShadow: '0px 0px 5px 0px rgba(0,0,0,1)'}}>
-            <img className="navbar-brand" href="#" alt='' src={logo}/>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarText">
-                <ul className="navbar-nav">
-                    <li className={styles.logIn}>
-                        <button className="nav-link" onClick={togglePopupLogin}>
-                            Login
-                        </button>
-                    </li>
-                    <li className={styles.register}>
-                        <button className="nav-link" onClick={togglePopupRegister}>
-                            Register
-                        </button>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <img className="navbar-brand" href="#" alt='' src={logo}/>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul className="navbar-nav">
+                        <li className={styles.logIn}>
+                            <button className="nav-link" onClick={togglePopupLogin}>
+                                Login
+                            </button>
+                        </li>
+                        <li className={styles.register}>
+                            <button className="nav-link" onClick={togglePopupRegister}>
+                                Register
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
             {isOpenLogin && <Popuplogin
                 handleClose = {togglePopupLogin}
@@ -49,7 +51,7 @@ export default function Navbar() {
                     <div>
                         Login
                     </div>
-            }/>}
+                }/>}
             {isOpenRegister && <PopupRegister
                 handleClose = {togglePopupRegister}
                 content = {

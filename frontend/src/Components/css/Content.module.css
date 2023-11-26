@@ -15,13 +15,13 @@
     width: 55vw;
     top: 65px;
     right: 0vw;
+    z-index: 100;
 }
 .continutTop {
     display: contents;
 }
 .content {
-    display: block;
-    border: 10px;
+    display: grid;
 }
 .contentMid1 {
     display: block;
@@ -66,4 +66,174 @@
     left: 54vw;
     border-radius: 6%;
     margin-top: 60px;
+}
+
+@media screen and (orientation: portrait) {
+    .text {
+        position: absolute;
+        z-index: 100;
+        top: calc(65px + 18vw);
+        left: 10vw;
+        background-color: inherit;
+        height: 10vh;
+        width: 39vw;
+        font: 'Inter';
+        font-size: 2.5vw;
+        color: white;
+    }
+    .imag {
+        position: absolute;
+        width: 50vw;
+        top: 180px;
+        right: 0vw;
+        z-index: 100;
+    }
+    .content {
+        position: relative;
+        top: 15vw;
+        display: grid;
+    }
+    .contentMid1 {
+        display: block;
+        position: absolute;
+        background-color: white;
+        height: 45vw;
+        width: 90vw;
+        top: 50vw;
+        left: 5vw;
+        border-radius: 6%;
+        margin-top: 60px;
+        z-index: 100;
+    }
+    .contentMid2 {
+        display: block;
+        position: absolute;
+        background-color: white;
+        height: 45vw;
+        width: 90vw;
+        top: 100vw;
+        left: 5vw;
+        border-radius: 6%;
+        margin-top: 60px;
+        z-index: 100;
+    }
+    .contentMid3 {
+        display: block;
+        position: absolute;
+        background-color: white;
+        height: 45vw;
+        width: 90vw;
+        top: 150vw;
+        left: 5vw;
+        border-radius: 6%;
+        margin-top: 60px;
+        z-index: 100;
+    }
+    .contentMid4 {
+        display: block;
+        position: absolute;
+        background-color: white;
+        height: 45vw;
+        width: 90vw;
+        top: 200vw;
+        left: 5vw;
+        border-radius: 6%;
+        margin-top: 60px;
+        z-index: 100;
+    }
+    @media screen and (max-width: 850px) {
+        .text {
+            position: absolute;
+            z-index: 100;
+            top: calc(65px + 18vw);
+            left: 10vw;
+            background-color: inherit;
+            height: 10vh;
+            width: 39vw;
+            font: 'Inter';
+            font-size: 2.5vw;
+            color: white;
+        }
+        .imag {
+            position: absolute;
+            width: 50vw;
+            top: 130px;
+            right: 0vw;
+            z-index: 100;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .text {
+            position: absolute;
+            z-index: 100;
+            top: calc(65px + 8vw);
+            left: 10vw;
+            background-color: inherit;
+            height: 10vh;
+            width: 39vw;
+            font: 'Inter';
+            font-size: 2.5vw;
+            color: white;
+        }
+        .imag {
+            position: absolute;
+            width: 50vw;
+            top: 65px;
+            right: 0vw;
+            z-index: 100;
+        }
+        .content {
+            position: relative;
+            top: 15vw;
+            display: grid;
+        }
+        .contentMid1 {
+            display: block;
+            position: absolute;
+            background-color: white;
+            height: 45vw;
+            width: 90vw;
+            top: 40vw;
+            left: 5vw;
+            border-radius: 6%;
+            margin-top: 60px;
+            z-index: 100;
+        }
+        .contentMid2 {
+            display: block;
+            position: absolute;
+            background-color: white;
+            height: 45vw;
+            width: 90vw;
+            top: 90vw;
+            left: 5vw;
+            border-radius: 6%;
+            margin-top: 60px;
+            z-index: 100;
+        }
+        .contentMid3 {
+            display: block;
+            position: absolute;
+            background-color: white;
+            height: 45vw;
+            width: 90vw;
+            top: 140vw;
+            left: 5vw;
+            border-radius: 6%;
+            margin-top: 60px;
+            z-index: 100;
+        }
+        .contentMid4 {
+            display: block;
+            position: absolute;
+            background-color: white;
+            height: 45vw;
+            width: 90vw;
+            top: 190vw;
+            left: 5vw;
+            border-radius: 6%;
+            margin-top: 60px;
+            z-index: 100;
+        }
+    }
 }

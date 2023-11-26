@@ -16,3 +16,18 @@
     position: fixed;
     right: 2vw;
 }
+
+@media (orientation: portrait) {
+    .navbar-toggler {
+        display: block !important; /* Important to override Bootstrap styles */
+    }
+
+    .navbar-nav {
+        display: none !important; /* Hide the collapsed menu by default */
+    }
+
+    .collapse.navbar-collapse {
+        display: block; /* Show the collapsed menu when the toggler is clicked */
+        z-index: 1000;
+    }
+}
