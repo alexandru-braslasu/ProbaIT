@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './css/Content.module.css';
 import testoasa from '../images/testoasa.png'
+import Box from "./Box";
 
-export default function Content() {
+export default function Content({nrPag}) {
     return (
         <div className={styles.content}>
             <div className={styles.continutTop}>
@@ -12,16 +13,16 @@ export default function Content() {
                 <img className={styles.imag} src={testoasa}/>
             </div>
             <div className={styles.contentMid1}>
-                <div className={styles.writing1}>
-                    Ce animal se afla pe tricourile departamentului de IT?
-                </div>
-                <div className={styles.writing2}>
-                    Make a choice:
-                </div>
-                <button className={styles.b11}/>
+                <Box id = {nrPag}/>
             </div>
             <div className={styles.contentMid2}>
-                Buna
+                <Box id = {0}/>
+            </div>
+            <div className={styles.contentMid3}>
+                <Box id = {0}/>
+            </div>
+            <div className={styles.contentMid4}>
+                <Box id = {0}/>
             </div>
         </div>
     );

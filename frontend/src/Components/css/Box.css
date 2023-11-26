@@ -1,0 +1,74 @@
+.question {
+    color: black;
+    position: relative;
+    margin-top: 1.2vw;
+    left: 1vw;
+    width: 35vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.choice-text {
+    color: black;
+    position: relative;
+    top: 1vw;
+    font-size: 1.5vw;
+    left: -11.5vw;
+}
+
+.form-check-label {
+    color: black;
+}
+
+.form-check-input {
+    border: 1px solid black;
+}
+
+.form-check {
+    position: relative;
+    top: 1vw;
+    left: 1.5vw;
+    height: 5vw;
+    text-align: left;
+    font-size: 2vw;
+}
+
+.btn.btn-primary.mt-2 {
+    position: relative;
+    height: 5vw;
+    width: 10vw;
+    font-size: 2vw;
+    top: 5vw;
+}
+
+@media screen and (min-width: 400px) and (max-width: 450px) {
+    .btn.btn-primary.mt-2 {
+        position: relative;
+        height: 6vw;
+        width: 11vw;
+        font-size: 2vw;
+        top: 0vw;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    .btn.btn-primary.mt-2 {
+        position: relative;
+        height: 6vw;
+        width: 11vw;
+        font-size: 2vw;
+        top: -4vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .btn.btn-primary.mt-2 {
+        position: relative;
+        height: 7vw;
+        width: 12vw;
+        font-size: 2vw;
+        top: -18vw;
+        left: 10vw;
+    }
+}

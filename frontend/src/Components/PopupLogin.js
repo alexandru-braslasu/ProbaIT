@@ -6,7 +6,7 @@ export default function Popuplogin(props) {
         <div className="popup-box">
             <div style={{position: "relative", left: "25vw"}}>
                 <div className="box">
-                    <button className="btn-close" onClick={props.handleClose}> </button>
+                    <button className="btn-close" onClick={props.handleClose}></button>
                     <div className="login-popup">
                         {props.content}
                     </div>

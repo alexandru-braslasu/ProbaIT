@@ -1,75 +1,62 @@
-import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Question from "./Components/Question";
-import qBank from "./Components/QuestionBank";
-import Score from "./Components/Score";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Question from './Question';
+import Score from './Score';
+import qBank from './QuestionBank';
+import './css/Box.css';
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			questionBank: qBank,
-			currentQuestion: 0,
-			selectedOption: "",
-			score: 0,
-			quizEnd: false,
-		};
-	}
+const Box = ({id}) => {
+  const [questionBank, setQuestionBank] = useState(qBank);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("");
+  const [score, setScore] = useState(0);
+  const [quizEnd, setQuizEnd] = useState(false);
 
-	handleOptionChange = (e) => {
-		this.setState({ selectedOption: e.target.value });
-	};
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
 
-	handleFormSubmit = (e) => {
-		e.preventDefault();
-		this.checkAnswer();
-		this.handleNextQuestion();
-	};
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    checkAnswer();
+    handleNextQuestion();
+  };
 
-	checkAnswer = () => {
-		const { questionBank, currentQuestion, selectedOption, score } = this.state;
-		if (selectedOption === questionBank[currentQuestion].answer) {
-			this.setState((prevState) => ({ score: prevState.score + 1 }));
-		}
-	};
+  const checkAnswer = () => {
+    if (selectedOption === questionBank[currentQuestion].answer) {
+      setScore((prevScore) => prevScore + 1);
+    }
+  };
 
-	handleNextQuestion = () => {
-		const { questionBank, currentQuestion } = this.state;
-		if (currentQuestion + 1 < questionBank.length) {
-			this.setState((prevState) => ({
-				currentQuestion: prevState.currentQuestion + 1,
-				selectedOption: "",
-			}));
-		} else {
-			this.setState({
-				quizEnd: true,
-			});
-		}
-	};
+  const handleNextQuestion = () => {
+    if (currentQuestion + 1 < questionBank.length) {
+      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+      setSelectedOption("");
+    } else {
+      setQuizEnd(true);
+    }
+  };
 
-	render() {
-		const { questionBank, currentQuestion, selectedOption, score, quizEnd } =
-			this.state;
-		return (
-			<div className="App d-flex flex-column align-items-center justify-content-center">
-				<h1 className="app-title">QUIZ APP</h1>
-				{!quizEnd ? (
-					<Question
-						question={questionBank[currentQuestion]}
-						selectedOption={selectedOption}
-						onOptionChange={this.handleOptionChange}
-						onSubmit={this.handleFormSubmit}
-					/>
-				) : (
-					<Score
-						score={score}
-						onNextQuestion={this.handleNextQuestion}
-						className="score"
-					/>
-				)}
-			</div>
-		);
-	}
-}
-export default App;
+  useEffect(() => {
+    if (quizEnd) {
+      // Perform any cleanup or additional actions when the quiz ends
+    }
+  }, [quizEnd]);
+
+  return (
+    <div className="App d-flex flex-column align-items-center justify-content-center">
+      {!quizEnd ? (
+        <Question
+          question={questionBank[id]}
+          selectedOption={selectedOption}
+          onOptionChange={handleOptionChange}
+          onSubmit={handleFormSubmit}
+        />
+      ) : (
+        <Score score={score} onNextQuestion={handleNextQuestion} className="score" />
+      )}
+    </div>
+  );
+};
+
+export default Box;

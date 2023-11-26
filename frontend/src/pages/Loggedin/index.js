@@ -5,11 +5,11 @@ import styles from '../../Components/css/Landingpage.module.css';
 import Content from '../../Components/Content';
 import Footer from '../../Components/Footer';
 
-export default function Landingpage() {
+export default function Loggedin() {
     return (
         <div>
             <LandingpageTop/>
-            <Content nrPag = {0}/>
+            <Content nrPag = {1}/>
             <img className={styles.land} src={backImage}/>
             <Footer/>
         </div>
