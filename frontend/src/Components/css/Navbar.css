@@ -19,15 +19,15 @@
 
 @media (orientation: portrait) {
     .navbar-toggler {
-        display: block !important; /* Important to override Bootstrap styles */
+        display: block !important;
     }
 
     .navbar-nav {
-        display: none !important; /* Hide the collapsed menu by default */
+        display: none !important;
     }
 
     .collapse.navbar-collapse {
-        display: block; /* Show the collapsed menu when the toggler is clicked */
+        display: block;
         z-index: 1000;
     }
 }

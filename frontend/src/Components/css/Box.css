@@ -84,13 +84,13 @@
             top: -5vw;
         }
     }
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 360px) {
         .form-check {
             position: relative;
             top: 1vw;
             left: -22vw;
             height: 5vw;
-            margin-bottom: -2vw;
+            margin-bottom: -4vw;
             text-align: left;
             font-size: 2vw;
         }
@@ -99,10 +99,13 @@
             height: 7vw;
             width: 14vw;
             font-size: 2vw;
-            top: -2vw;
+            top: -5vw;
+        }
+        .options div {
+            margin-bottom: -2vw;
         }
     }
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 280px) {
         .form-check {
             position: relative;
             top: 1vw;
@@ -110,14 +113,17 @@
             height: 5vw;
             margin-bottom: -5vw;
             text-align: left;
-            font-size: 1.5vw;
+            font-size: 2vw;
         }
         .btn.btn-primary.mt-2 {
             position: relative;
             height: 7vw;
             width: 15vw;
             font-size: 2vw;
-            top: -1vw;
+            top: -5vw;
+        }
+        .options div {
+            margin-bottom: -4vw;
         }
     }
 }

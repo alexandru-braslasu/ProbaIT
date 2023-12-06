@@ -14,6 +14,16 @@
         background-position: center;
         background-attachment: fixed;
         width: 100vw;
-        height: 270vw;
+        height: 280vw;
+    }
+    @media screen and (max-width: 300px) {
+        .land {
+            content: url('../../images/back.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100vw;
+            height: 300vw;
+        }
     }
 }

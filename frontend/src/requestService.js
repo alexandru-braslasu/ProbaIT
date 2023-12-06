@@ -22,12 +22,17 @@ const RequestService = async (url, body, type) => {
     }
 }
 
+const register =  (email, password) => {
+    return RequestService("/loggedin/register", { email, password }, "post")
+ }
+
 const logged = () => {
-    return RequestService("users/logged", {}, "get")
+    return RequestService("/loggedin", {}, "get")
 }
 
 let routes = { 
-    logged
+    logged,
+    register
 }
 
 export default routes

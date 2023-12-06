@@ -1,0 +1,12 @@
+.poll {
+    color: #04395E;
+    position: fixed;
+    top: 0.8vh;
+    right: 15rem;
+}
+.logOut {
+    color: #04395E;
+    position: fixed;
+    top: 0.8vh;
+    right: 5rem;
+}

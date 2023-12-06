@@ -1,17 +1,16 @@
 import React from 'react';
-import LandingpageTop from '../../Components/LandingpageTop';
 import backImage from '../../images/background.png';
-import back from '../../images/back.png';
 import styles from '../../Components/css/Landingpage.module.css';
 import Content from '../../Components/Content';
 import Footer from '../../Components/Footer';
+import NavbarLoggedIn from '../../Components/NavbarLoggedIn';
 
 export default function Loggedin() {
     return (
         <div>
-            <LandingpageTop/>
+            <NavbarLoggedIn/>
             <Content nrPag = {1}/>
-            <img className={styles.land} src={backImage}/>
+            <img className={styles.land} alt='' src={backImage}/>
             <Footer/>
         </div>
     );
