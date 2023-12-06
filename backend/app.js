@@ -172,8 +172,38 @@ app.delete("/polls/:pollId", auth, async (request, response) => {
   return response.status(200).send({ poll });
 });
 
-app.patch("/polls/vote/:id", auth, (request, response) => {
+app.patch("/polls/vote/:id", auth, async (request, response) => {
+  const userId = request.user.id;
+  const pollId = request.params.id;
 
+  try {
+    const poll = await Poll.findById(pollId);
+
+    if (!poll) {
+      return response.status(404).json({ error: "Poll not found" });
+    }
+    const isMultipleChoice = poll.poll_type === "Multiple choice";
+    const selectedOptionIndex = poll.options.findIndex(
+      (option) => option.option_text === request.body.selectedOption
+    );
+    if (selectedOptionIndex === -1) {
+      return response.status(400).json({ error: "Invalid option selected" });
+    }
+    const hasVoted = poll.options[selectedOptionIndex].votes.includes(userId);
+    if (hasVoted && !isMultipleChoice) {
+      return response.status(400).json({ error: "You have already voted" });
+    }
+    poll.options[selectedOptionIndex].number_of_votes += 1;
+    if (!hasVoted) {
+      poll.options[selectedOptionIndex].votes.push(userId);
+    }
+    await poll.save();
+
+    response.json({ message: "Vote recorded successfully" });
+  } catch (error) {
+    console.error(error);
+    response.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 module.exports = app;

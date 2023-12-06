@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../node_modules/bootstrap/dist/js/bootstrap';
 import logo from '../images/logo.png';
 import styles from './css/NavbarLoggedIn.module.css';
 import './css/Navbar.css';
